@@ -7,7 +7,11 @@
     "doc": "docs"
   },
   "scripts": {
+    "build:statics": "sui-bundler build -C",
+    "build": "npm run build:statics && npm run clean && npm run copy",
+    "clean": "rimraf docs/",
     "co": "sui-mono commit",
+    "copy": "cpx public/**/* docs/",
     "dev": "sui-bundler dev",
     "lint": "sui-lint js --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -49,7 +53,9 @@
     "@s-ui/lint": "3",
     "@s-ui/mono": "1",
     "@s-ui/precommit": "2",
+    "cpx": "^1.5.0",
     "husky": "4.0.0",
-    "prop-types": "15.7.2"
+    "prop-types": "15.7.2",
+    "rimraf": "^3.0.0"
   }
 }
