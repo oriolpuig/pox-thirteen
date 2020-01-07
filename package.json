@@ -36,11 +36,19 @@
     "extends": "./node_modules/@s-ui/lint/stylelint.config.js"
   },
   "dependencies": {
-    "@s-ui/bundler": "^5.36.0",
-    "@s-ui/lint": "^3.14.0",
-    "@s-ui/mono": "^1.47.0",
-    "@s-ui/precommit": "^2.7.0",
-    "husky": "^4.0.0",
-    "prop-types": "^15.7.2"
+    "@s-ui/hoc": "^1.24.0",
+    "@s-ui/react-context": "^1.4.0",
+    "@s-ui/react-initial-props": "2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^3.2.4"
+  },
+  "devDependencies": {
+    "@s-ui/bundler": "5",
+    "@s-ui/lint": "3",
+    "@s-ui/mono": "1",
+    "@s-ui/precommit": "2",
+    "husky": "4.0.0",
+    "prop-types": "15.7.2"
   }
 }
