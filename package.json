@@ -36,12 +36,13 @@
     "extends": "./node_modules/@s-ui/lint/stylelint.config.js"
   },
   "dependencies": {
-    "@s-ui/hoc": "^1.24.0",
-    "@s-ui/react-context": "^1.4.0",
+    "@s-ui/hoc": "1",
+    "@s-ui/i18n": "1",
+    "@s-ui/react-context": "1",
     "@s-ui/react-initial-props": "2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router": "^3.2.4"
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-router": "3.2.4"
   },
   "devDependencies": {
     "@s-ui/bundler": "5",
