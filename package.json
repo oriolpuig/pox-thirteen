@@ -1,0 +1,46 @@
+{
+  "name": "pox-thirteen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "co": "sui-mono commit",
+    "dev": "sui-bundler dev",
+    "lint": "sui-lint js --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ssr": "sui-bundler build -C && sui-ssr build -C && node server/index.js --inspect `pbpaste`",
+    "release": "sui-mono release",
+    "release:check": "sui-mono check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oriolpuig/pox-thirteen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oriolpuig/pox-thirteen/issues"
+  },
+  "homepage": "https://github.com/oriolpuig/pox-thirteen/docs/index.html",
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@s-ui/lint/eslintrc.js"
+    ]
+  },
+  "prettier": "./node_modules/@s-ui/lint/.prettierrc.js",
+  "stylelint": {
+    "extends": "./node_modules/@s-ui/lint/stylelint.config.js"
+  },
+  "dependencies": {
+    "@s-ui/bundler": "^5.36.0",
+    "@s-ui/lint": "^3.14.0",
+    "@s-ui/mono": "^1.47.0",
+    "@s-ui/precommit": "^2.7.0",
+    "husky": "^4.0.0",
+    "prop-types": "^15.7.2"
+  }
+}
