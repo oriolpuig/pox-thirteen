@@ -13,6 +13,8 @@
     "co": "sui-mono commit",
     "copy": "cpx public/**/* docs/",
     "dev": "sui-bundler dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public",
     "lint": "sui-lint js --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "ssr": "sui-bundler build -C && sui-ssr build -C && node server/index.js --inspect `pbpaste`",
@@ -29,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/oriolpuig/pox-thirteen/issues"
   },
-  "homepage": "https://github.com/oriolpuig/pox-thirteen/docs/index.html",
+  "homepage": "https://github.com/oriolpuig/pox-thirteen",
   "eslintConfig": {
     "extends": [
       "./node_modules/@s-ui/lint/eslintrc.js"
@@ -54,6 +56,7 @@
     "@s-ui/mono": "1",
     "@s-ui/precommit": "2",
     "cpx": "^1.5.0",
+    "gh-pages": "^2.2.0",
     "husky": "4.0.0",
     "prop-types": "15.7.2",
     "rimraf": "^3.0.0"
