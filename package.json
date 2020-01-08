@@ -8,13 +8,13 @@
   },
   "scripts": {
     "build:statics": "sui-bundler build -C",
-    "build": "npm run build:statics && npm run clean && npm run copy",
-    "clean": "rimraf docs/",
+    "build": "npm run build:statics",
+    "clean": "rimraf public/",
     "co": "sui-mono commit",
     "copy": "cpx public/**/* docs/",
     "dev": "sui-bundler dev",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d public",
+    "deploy": "now",
     "lint": "sui-lint js --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "ssr": "sui-bundler build -C && sui-ssr build -C && node server/index.js --inspect `pbpaste`",
@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/oriolpuig/pox-thirteen/issues"
   },
-  "homepage": "https://github.com/oriolpuig/pox-thirteen",
+  "homepage": "https://oriolpuig.github.io/pox-thirteen/",
   "eslintConfig": {
     "extends": [
       "./node_modules/@s-ui/lint/eslintrc.js"
@@ -40,6 +40,9 @@
   "prettier": "./node_modules/@s-ui/lint/.prettierrc.js",
   "stylelint": {
     "extends": "./node_modules/@s-ui/lint/stylelint.config.js"
+  },
+  "sui-bundler": {
+    "cdn": "./"
   },
   "dependencies": {
     "@s-ui/hoc": "1",
@@ -58,7 +61,9 @@
     "cpx": "^1.5.0",
     "gh-pages": "^2.2.0",
     "husky": "4.0.0",
+    "now": "^16.7.1",
     "prop-types": "15.7.2",
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.0",
+    "serve": "^11.3.0"
   }
 }

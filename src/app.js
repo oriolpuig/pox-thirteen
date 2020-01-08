@@ -12,12 +12,20 @@ import providerFactory from '../universal/providerFactory'
 
 contextFactory(createClientContextFactoryParams()).then(context => {
   match(
-    {routes, history: browserHistory},
-    (err, redirectLocation, renderProps) => {
+    {history: browserHistory, routes},
+    (err, redirectLocation, renderProps = {}) => {
       if (err) console.log(err)
 
+      if (redirectLocation && redirectLocation.pathname) {
+        window.location = redirectLocation.pathname
+        return
+      }
+
       const App = providerFactory(context)(Router)
-      ReactDOM.render(<App {...renderProps} />, document.getElementById('app'))
+      ReactDOM.hydrate(
+        <App {...renderProps} history={browserHistory} />,
+        window.document.getElementById('app')
+      )
     }
   )
 })
