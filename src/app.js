@@ -10,6 +10,12 @@ import createClientContextFactoryParams from '@s-ui/react-initial-props/lib/crea
 import contextFactory from '../universal/contextFactory'
 import providerFactory from '../universal/providerFactory'
 
+import( // eslint-disable-line
+  /* webpackChunkName: "AppStyles" */
+  /* webpackMode: "eager" */
+  './scss/index.scss'
+)
+
 contextFactory(createClientContextFactoryParams()).then(context => {
   match(
     {history: browserHistory, routes},
