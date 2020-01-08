@@ -1,12 +1,19 @@
-import React, {useContext} from 'react'
-import Context from '@s-ui/react-context'
-// import i18n from '@s-ui/i18n/lib'
+import React from 'react'
+// import Context from '@s-ui/react-context'
+
+import Header from '../components/shared/Header'
+import Intro from '../components/sections/Intro'
 
 const Home = () => {
-  const {i18n, domain} = useContext(Context)
-  const {event} = domain || {}
+  // const {i18n, domain} = useContext(Context)
+  // const {event} = domain || {}
 
-  return <h1>{i18n.t(event.title)}</h1>
+  return (
+    <>
+      <Header />
+      <Intro />
+    </>
+  )
 }
 
 export default Home

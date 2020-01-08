@@ -1,0 +1,36 @@
+body {
+  background: $white;
+  color: $c-black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: $c-highlight;
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: $c-highlight-hover;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #0e1b4d;
+}

@@ -1,1 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
+
+@import './components/header';
+@import './components/info';
+
+$c-black: #2f3138;
+$c-highlight: #f82249;
+$c-highlight-hover: #f8234a;
